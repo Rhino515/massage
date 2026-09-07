@@ -1,17 +1,18 @@
-FIXED FLAT PWA — NO FOLDERS REQUIRED
+VERSION 5 — AVERAGE HOURLY PAY ADDED
 
-Upload all files directly to the root of the GitHub repository and replace the old versions:
-index.html
-manifest.webmanifest
-sw.js
-icon-192.png
-icon-512.png
+Upload all files directly to the ROOT of GitHub and replace the older copies:
+- index.html
+- manifest.webmanifest
+- sw.js
+- icon-192.png
+- icon-512.png
 
-Important: replace sw.js too. Version 3 clears the older cached app.
+New feature:
+Average Hourly Pay (without tips) is displayed under Estimated Total.
 
-After GitHub Pages redeploys:
-1. Open the website in Safari.
-2. Refresh the page once.
-3. If installed on the Home Screen, close the app completely and reopen it.
+Formula:
+(Base hourly earnings + 15% massage commission) / total hours worked
 
-Save Day stores shifts in local browser storage. History appears below the weekly pay-period card.
+Tips are NOT included in the average hourly pay.
+
+After GitHub Pages redeploys, refresh Safari once or fully close/reopen the installed Home Screen app.
