@@ -1,7 +1,17 @@
-APPELLATION SPA EARNINGS
+APPELLATION SPA EARNINGS PWA
 
-Important: ChatGPT/iPhone file preview may display the page but block JavaScript. In that preview, + / - buttons and live totals cannot work.
+UPLOAD TO GITHUB PAGES
+1. Put index.html, manifest.webmanifest, sw.js, and the icons folder in the root of your repository.
+2. Commit/push the files.
+3. In GitHub: Settings > Pages > Deploy from a branch > main > /(root).
+4. Open the published URL in Safari on iPhone.
 
-Use the app in a real web browser. Once hosted/opened in Safari, the calculator is fully interactive.
+INSTALL ON IPHONE
+1. Open the published site in Safari.
+2. Tap Share.
+3. Tap Add to Home Screen.
+4. Open it from the new home-screen icon.
 
-Pay formula: total hours x $17 + 15% of massage service sales + tips.
+NOTES
+- Saved history uses localStorage, so it stays on that browser/device.
+- The service worker caches the app shell for offline use after the first successful visit.
