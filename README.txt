@@ -1,17 +1,19 @@
-APPELLATION SPA EARNINGS PWA
+APPELLATION SPA EARNINGS — FLAT GITHUB UPLOAD
 
-UPLOAD TO GITHUB PAGES
-1. Put index.html, manifest.webmanifest, sw.js, and the icons folder in the root of your repository.
-2. Commit/push the files.
-3. In GitHub: Settings > Pages > Deploy from a branch > main > /(root).
-4. Open the published URL in Safari on iPhone.
+UPLOAD ALL 5 APP FILES DIRECTLY TO THE ROOT OF YOUR GITHUB REPOSITORY:
+- index.html
+- manifest.webmanifest
+- sw.js
+- icon-192.png
+- icon-512.png
 
-INSTALL ON IPHONE
-1. Open the published site in Safari.
-2. Tap Share.
-3. Tap Add to Home Screen.
-4. Open it from the new home-screen icon.
+There are NO folders in this ZIP.
 
-NOTES
-- Saved history uses localStorage, so it stays on that browser/device.
-- The service worker caches the app shell for offline use after the first successful visit.
+After upload:
+1. Commit the files.
+2. Make sure GitHub Pages is set to main / (root).
+3. Wait for the site to redeploy.
+4. Open the site in Safari.
+5. If you still see the old version, refresh once or close/reopen the home-screen app.
+
+Massage categories are collapsible. Swedish starts open; the others start collapsed.

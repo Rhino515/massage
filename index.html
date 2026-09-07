@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Spa Earnings">
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <title>Appellation Spa Earnings</title>
 <style>
@@ -34,6 +34,16 @@ select{width:100%;border:1px solid #bfb8aa;background:#faf8f2;color:var(--ink);p
 .status{font-size:11px;margin-top:9px;color:#68645a;min-height:16px}
 .empty-history{font-size:11px;color:var(--muted);padding:10px 0}
 
+
+details.service-group{border-top:1px solid var(--line);padding:0}
+details.service-group:first-of-type{border-top:0}
+details.service-group summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:14px 0;font:400 18px Georgia,"Times New Roman",serif;-webkit-tap-highlight-color:transparent}
+details.service-group summary::-webkit-details-marker{display:none}
+details.service-group summary::after{content:"+";font-family:Arial,sans-serif;font-size:22px;font-weight:300;color:#6d6a60;line-height:1}
+details.service-group[open] summary::after{content:"−"}
+details.service-group .options{padding-bottom:14px}
+details.service-group .weekday-note{margin-top:-4px;padding-bottom:2px}
+
 @media(max-width:390px){main{padding-left:13px;padding-right:13px}.card{padding:14px}.hero{font-size:31px}.row.stack{display:grid;grid-template-columns:1fr 1fr}.option{padding:8px}.option-title{font-size:12px}}
 </style>
 </head>
@@ -47,35 +57,30 @@ select{width:100%;border:1px solid #bfb8aa;background:#faf8f2;color:var(--ink);p
 
 <div class="card"><h2>Massages</h2><div class="muted" style="margin-bottom:12px">Tap + for every service performed. Her 15% earnings are shown beside each massage.</div>
 
-<div class="service-group"><div class="service-name">Swedish</div><div class="options">
+<details class="service-group" open><summary>Swedish</summary><div class="options">
 <div class="option" data-id="sw60" data-mins="60" data-price="225"><div><div class="option-title">60 minutes</div><div class="option-meta">$225 service <span class="commission-chip">Her 15%: $33.75</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option" data-id="sw75" data-mins="75" data-price="275"><div><div class="option-title">75 minutes</div><div class="option-meta">$275 service <span class="commission-chip">Her 15%: $41.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option" data-id="sw90" data-mins="90" data-price="325"><div><div class="option-title">90 minutes</div><div class="option-meta">$325 service <span class="commission-chip">Her 15%: $48.75</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option" data-id="sw105" data-mins="105" data-price="375"><div><div class="option-title">105 minutes</div><div class="option-meta">$375 service <span class="commission-chip">Her 15%: $56.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
-</div></div>
-
-<div class="service-group"><div class="service-name">Deep Tissue</div><div class="options">
+</div></details>
+<details class="service-group"><summary>Deep Tissue</summary><div class="options">
 <div class="option" data-id="deep75" data-mins="75" data-price="275"><div><div class="option-title">75 minutes</div><div class="option-meta">$275 service <span class="commission-chip">Her 15%: $41.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
-</div></div>
-
-<div class="service-group"><div class="service-name">Trigger Point Release</div><div class="weekday-note">Tue–Thu pricing shown first; Fri–Mon prices are selected automatically in Safari.</div><div class="options">
+</div></details>
+<details class="service-group"><summary>Trigger Point Release</summary><div class="weekday-note">Tue–Thu pricing shown first; Fri–Mon prices are selected automatically in Safari.</div><div class="options">
 <div class="option variable" data-id="tr60" data-mins="60" data-weekday="195" data-weekend="225"><div><div class="option-title">60 minutes</div><div class="option-meta"><span class="service-price">$195 Tue–Thu / $225 Fri–Mon</span> <span class="commission-chip">Her 15%: $29.25–$33.75</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option variable" data-id="tr75" data-mins="75" data-weekday="235" data-weekend="275"><div><div class="option-title">75 minutes</div><div class="option-meta"><span class="service-price">$235 Tue–Thu / $275 Fri–Mon</span> <span class="commission-chip">Her 15%: $35.25–$41.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option variable" data-id="tr90" data-mins="90" data-weekday="275" data-weekend="325"><div><div class="option-title">90 minutes</div><div class="option-meta"><span class="service-price">$275 Tue–Thu / $325 Fri–Mon</span> <span class="commission-chip">Her 15%: $41.25–$48.75</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option variable" data-id="tr105" data-mins="105" data-weekday="315" data-weekend="375"><div><div class="option-title">105 minutes</div><div class="option-meta"><span class="service-price">$315 Tue–Thu / $375 Fri–Mon</span> <span class="commission-chip">Her 15%: $47.25–$56.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
-</div></div>
-
-<div class="service-group"><div class="service-name">Hot Synergy Stone / Himalayan Salt</div><div class="weekday-note">Tue–Thu pricing shown first; Fri–Mon prices are selected automatically in Safari.</div><div class="options">
+</div></details>
+<details class="service-group"><summary>Hot Synergy Stone / Himalayan Salt</summary><div class="weekday-note">Tue–Thu pricing shown first; Fri–Mon prices are selected automatically in Safari.</div><div class="options">
 <div class="option variable" data-id="st60" data-mins="60" data-weekday="195" data-weekend="225"><div><div class="option-title">60 minutes</div><div class="option-meta"><span class="service-price">$195 Tue–Thu / $225 Fri–Mon</span> <span class="commission-chip">Her 15%: $29.25–$33.75</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option variable" data-id="st75" data-mins="75" data-weekday="235" data-weekend="275"><div><div class="option-title">75 minutes</div><div class="option-meta"><span class="service-price">$235 Tue–Thu / $275 Fri–Mon</span> <span class="commission-chip">Her 15%: $35.25–$41.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option variable" data-id="st90" data-mins="90" data-weekday="275" data-weekend="325"><div><div class="option-title">90 minutes</div><div class="option-meta"><span class="service-price">$275 Tue–Thu / $325 Fri–Mon</span> <span class="commission-chip">Her 15%: $41.25–$48.75</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
 <div class="option variable" data-id="st105" data-mins="105" data-weekday="315" data-weekend="375"><div><div class="option-title">105 minutes</div><div class="option-meta"><span class="service-price">$315 Tue–Thu / $375 Fri–Mon</span> <span class="commission-chip">Her 15%: $47.25–$56.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
-</div></div>
-
-<div class="service-group"><div class="service-name">Pregnancy</div><div class="options">
+</div></details>
+<details class="service-group"><summary>Pregnancy</summary><div class="options">
 <div class="option" data-id="preg75" data-mins="75" data-price="275"><div><div class="option-title">75 minutes</div><div class="option-meta">$275 service <span class="commission-chip">Her 15%: $41.25</span></div></div><div class="controls"><button type="button" class="qbtn minus">−</button><span class="qnum">0</span><button type="button" class="qbtn plus">+</button></div></div>
-</div></div>
-
+</div></details>
 <div id="massageHours" class="massage-hours">No massages added yet.</div><noscript><div class="fallback" style="border:1px solid #9b7d62;padding:10px;background:#fff8ef"><strong>Calculator unavailable in this preview.</strong><br>This viewer has JavaScript turned off. Open this file in Safari or another browser to use the + / − buttons and live totals.</div></noscript><div id="jsStatus" class="fallback" style="display:none"></div></div>
 
 <div class="card"><h2>Tips</h2><label for="tips">Tips received (optional)</label><input id="tips" inputmode="decimal" type="number" min="0" step="0.01" placeholder="0.00"></div>
